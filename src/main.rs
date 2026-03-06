@@ -10,13 +10,12 @@ use tower_http::services::ServeDir;
 
 use api::content::ContentStore;
 
-#[tokio::main]
-async fn main() {
+fn build_router() -> Router {
     let content_dir =
         std::env::var("EPICPATH_CONTENT_DIR").unwrap_or_else(|_| "content".to_string());
     let store = ContentStore::load(&content_dir);
 
-    let app = Router::new()
+    Router::new()
         .route("/", get(views::pages::home))
         .route("/concepts", get(views::pages::concepts_list))
         .route("/concepts/{id}", get(views::pages::concept_detail))
@@ -34,10 +33,11 @@ async fn main() {
         .route("/toggle-theme", post(views::pages::toggle_theme))
         .nest_service("/static", ServeDir::new("static"))
         .layer(CorsLayer::permissive())
-        .with_state(store);
+        .with_state(store)
+}
 
-    let addr = "0.0.0.0:3333";
-    println!("EpicPath running at http://localhost:3333");
-    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+#[shuttle_runtime::main]
+async fn main() -> shuttle_axum::ShuttleAxum {
+    let router = build_router();
+    Ok(router.into())
 }
