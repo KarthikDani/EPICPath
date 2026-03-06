@@ -1,0 +1,55 @@
+id: chart-review-results
+title: "Reviewing Results in Chart Review"
+module: chart-review
+roles: ["clinician", "pathologist", "nurse"]
+difficulty: beginner
+estimated_minutes: 5
+tags: ["chart-review", "results", "lab-results", "pathology-results"]
+prerequisites: ["results", "epic-overview"]
+
+steps:
+  - number: 1
+    title: "Open the patient chart"
+    description: "Find and open the patient whose results you want to review."
+    action: "Use Patient Lookup (Ctrl+1), search by name or MRN, and select the patient."
+    tips:
+      - "You can also click a patient from your schedule or My Patients list"
+
+  - number: 2
+    title: "Navigate to Chart Review"
+    description: "Open the Chart Review activity."
+    action: "Click Chart Review in the activity tabs, or use the keyboard shortcut if configured."
+    tips:
+      - "Chart Review may open automatically when you select a patient, depending on your configuration"
+
+  - number: 3
+    title: "Select Results Review tab"
+    description: "Within Chart Review, navigate to the Results Review section."
+    action: "Click the 'Results' or 'Labs' tab in the Chart Review navigator."
+    tips:
+      - "You can filter by date range to narrow down results"
+      - "Some views separate lab results from imaging and pathology"
+
+  - number: 4
+    title: "Find the specific result"
+    description: "Locate the result you are looking for."
+    action: "Results are listed chronologically. Use filters for result type (Chemistry, Hematology, Pathology, etc.) or search by test name."
+    tips:
+      - "Abnormal results are typically flagged with H (high), L (low), or marked in red"
+      - "Critical values are prominently highlighted"
+
+  - number: 5
+    title: "View result details"
+    description: "Click on a result to see the full details."
+    action: "For lab results, you will see the value, reference range, and flags. For pathology, you will see the full report (gross, micro, diagnosis)."
+    tips:
+      - "You can trend a lab value over time by right-clicking and selecting 'Graph'"
+      - "Pathology reports may have multiple sections -- scroll to see the full report"
+
+  - number: 6
+    title: "Acknowledge the result"
+    description: "Mark the result as reviewed."
+    action: "Some results require explicit acknowledgment. Click 'Acknowledge' or the checkmark to clear the result from your InBasket."
+    tips:
+      - "Acknowledging a result documents that you saw it -- this is medicolegally important"
+      - "You can add a note when acknowledging (e.g., 'discussed with patient')"

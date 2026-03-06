@@ -1,0 +1,74 @@
+id: signing-out-case
+title: "Signing Out a Surgical Pathology Case"
+module: beaker-ap
+roles: ["pathologist"]
+difficulty: intermediate
+estimated_minutes: 15
+tags: ["beaker", "sign-out", "pathology", "diagnosis", "reporting"]
+prerequisites: ["beaker-ap", "accessioning-specimen"]
+
+steps:
+  - number: 1
+    title: "Open your AP worklist"
+    description: "The pathologist worklist shows all cases assigned to you or available for sign-out."
+    action: "Navigate to the Beaker AP Worklist activity. Filter by status (e.g., 'Ready for Sign-Out') and assignment."
+    tips:
+      - "You can customize worklist columns to show case type, priority, and days pending"
+      - "Some institutions color-code cases by urgency (rush, routine, etc.)"
+
+  - number: 2
+    title: "Select a case"
+    description: "Click on a case to open it for review."
+    action: "Review the case header: patient demographics, clinical history, ordering provider, specimen type, and number of parts."
+    tips:
+      - "Always read the clinical history before examining slides"
+      - "Check if there are prior pathology cases for comparison"
+
+  - number: 3
+    title: "Review gross description"
+    description: "The gross description was entered during grossing (by the PA or grossing resident)."
+    action: "Read the gross description for accuracy and completeness. Verify measurements, number of sections submitted, and ink colors used."
+    tips:
+      - "You can edit the gross description before signing if corrections are needed"
+      - "For cancer cases, margin measurements in the gross are critical"
+
+  - number: 4
+    title: "Examine slides"
+    description: "Review the histologic slides (glass slides on the microscope or digital slides in the viewer)."
+    action: "Correlate microscopic findings with the gross description and clinical history."
+    tips:
+      - "EPIC may integrate with a digital pathology viewer -- check if your institution has this"
+      - "Use the 'Prior Cases' section to compare with previous biopsies"
+
+  - number: 5
+    title: "Enter diagnosis"
+    description: "Type your final diagnosis into the Beaker AP report."
+    action: "Enter the Final Diagnosis field. Use SmartPhrases (e.g., .diagcolon) for standardized formatting. Include microscopic description if applicable."
+    tips:
+      - "For multi-part cases, enter a diagnosis for each part separately"
+      - "Use the department's standardized diagnostic terminology"
+
+  - number: 6
+    title: "Complete synoptic report (if cancer)"
+    description: "For malignant cases, a CAP synoptic report is required."
+    action: "Open the synoptic reporting template. Fill in all required fields: tumor type, size, grade, margins, lymphovascular invasion, staging, etc."
+    tips:
+      - "EPIC will flag required fields that are missing"
+      - "The synoptic data flows into cancer registry reporting"
+
+  - number: 7
+    title: "Sign the report"
+    description: "Electronically sign the case to finalize it."
+    action: "Click Sign/Verify (or press F6). You may need to enter your password or use two-factor authentication."
+    tips:
+      - "Once signed, the report is immediately available in Chart Review"
+      - "The ordering provider receives an InBasket notification"
+      - "If you need to make changes after signing, you must use an Amendment or Addendum"
+
+  - number: 8
+    title: "Handle pending ancillary studies (if any)"
+    description: "If you ordered special stains, IHC, or molecular tests, the case may need a preliminary sign-out."
+    action: "You can sign out with a preliminary diagnosis and add an addendum when ancillary results return."
+    tips:
+      - "Use your worklist filter to track cases with pending ancillaries"
+      - "Some institutions allow 'partial sign-out' for multi-part cases"

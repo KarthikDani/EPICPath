@@ -1,0 +1,45 @@
+id: new-pathology-resident
+title: "New Pathology Resident"
+description: "A structured learning path for pathology residents starting at a hospital using EPIC. Covers the essential concepts, modules, and workflows you will use daily."
+role: pathologist
+difficulty: beginner
+estimated_hours: 4
+
+modules:
+  - id: week-1-foundations
+    title: "Week 1: EPIC Foundations"
+    description: "Understand what EPIC is, how it is structured, and how to navigate the interface."
+    concepts:
+      - epic-overview
+      - hyperspace
+      - epic-modules
+      - navigator
+    workflows: []
+
+  - id: week-1-communication
+    title: "Week 1: Communication & Results"
+    description: "Learn how EPIC handles messages, notifications, and result delivery."
+    concepts:
+      - inbasket
+      - results
+      - orders
+    workflows:
+      - chart-review-results
+
+  - id: week-2-beaker
+    title: "Week 2: Beaker & Lab Pathology"
+    description: "Deep dive into EPIC's laboratory and anatomic pathology module."
+    concepts:
+      - beaker
+      - beaker-ap
+    workflows:
+      - accessioning-specimen
+      - signing-out-case
+
+  - id: week-2-efficiency
+    title: "Week 2: Working Efficiently"
+    description: "Learn the tools and shortcuts that make daily work in EPIC faster."
+    concepts:
+      - smartphrases
+      - mychart
+    workflows: []

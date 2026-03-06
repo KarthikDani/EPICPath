@@ -1,0 +1,64 @@
+id: accessioning-specimen
+title: "Accessioning a Specimen in Beaker"
+module: beaker-ap
+roles: ["lab-tech", "pathologist"]
+difficulty: beginner
+estimated_minutes: 10
+tags: ["beaker", "accessioning", "specimen", "lab"]
+prerequisites: ["beaker", "orders"]
+
+steps:
+  - number: 1
+    title: "Receive the specimen"
+    description: "The specimen arrives in the lab with a paper requisition or an electronic order already in EPIC."
+    action: "Verify that the specimen container label matches the requisition (patient name, MRN, specimen type, date/time collected)."
+    tips:
+      - "Always check for two patient identifiers (name + MRN or name + DOB)"
+      - "If there is a discrepancy, do NOT accession -- contact the submitting provider"
+
+  - number: 2
+    title: "Open Specimen Receive activity"
+    description: "In Hyperspace, navigate to the Specimen Receive or Accessioning activity in Beaker."
+    action: "Search for the patient by MRN or name. You should see the pending order(s) for this patient."
+    tips:
+      - "If no pending order exists, you may need to create a walk-in order"
+      - "Some labs use barcode scanners to pull up orders by scanning the requisition"
+
+  - number: 3
+    title: "Match specimen to order"
+    description: "Select the correct order from the list that matches the specimen you have in hand."
+    action: "Verify specimen type, collection date/time, and ordering provider match."
+    tips:
+      - "Patients may have multiple pending orders -- make sure you pick the right one"
+
+  - number: 4
+    title: "Assign accession number"
+    description: "EPIC assigns an accession number (e.g., S25-12345 for surgical pathology) when you accession the specimen."
+    action: "Confirm the accession number and note the case type prefix (S for surgical, C for cytology, etc.)."
+    tips:
+      - "The numbering format depends on your institution's configuration"
+      - "Some labs use annual sequential numbering, others use different schemes"
+
+  - number: 5
+    title: "Enter specimen details"
+    description: "Record specimen-specific information."
+    action: "Enter or confirm: number of containers, specimen site/laterality, clinical history, and any special instructions."
+    tips:
+      - "Clinical history is critical for the pathologist -- flag if it is missing"
+      - "Laterality errors are a patient safety issue -- verify carefully"
+
+  - number: 6
+    title: "Print labels"
+    description: "Print cassette and slide labels for the specimen."
+    action: "Select the appropriate label printer and print. Labels will include the accession number, patient info, and part designation."
+    tips:
+      - "Verify labels printed correctly before applying to cassettes"
+      - "Some labs print labels at grossing instead of accessioning"
+
+  - number: 7
+    title: "Complete accessioning"
+    description: "Finalize the accessioning process."
+    action: "Click Accept/Complete. The case now appears on the pathology worklist and is ready for grossing."
+    tips:
+      - "The case status changes from 'Ordered' to 'Accessioned' or 'In Lab'"
+      - "The ordering provider can now see that the specimen was received"

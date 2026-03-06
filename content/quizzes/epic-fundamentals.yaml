@@ -1,0 +1,61 @@
+id: epic-fundamentals
+title: "EPIC Fundamentals Quiz"
+description: "Test your knowledge of core EPIC concepts, navigation, and terminology."
+concepts: ["epic-overview", "hyperspace", "inbasket", "orders", "results"]
+difficulty: beginner
+
+questions:
+  - id: q1
+    text: "What is Hyperspace?"
+    type: multiple_choice
+    options:
+      - "EPIC's patient portal"
+      - "EPIC's primary desktop application for clinicians and staff"
+      - "EPIC's billing module"
+      - "EPIC's database engine"
+    correct: 1
+    explanation: "Hyperspace is the main desktop client application that clinicians, staff, and administrators use to interact with EPIC. Hyperdrive is the newer web-based version."
+
+  - id: q2
+    text: "What is InBasket used for?"
+    type: multiple_choice
+    options:
+      - "Scheduling appointments"
+      - "Managing internal messages, results notifications, and tasks"
+      - "Writing clinical notes"
+      - "Billing and coding"
+    correct: 1
+    explanation: "InBasket is EPIC's internal messaging and notification center. It collects results, messages from other providers, patient messages, prescription requests, and other items that need attention."
+
+  - id: q3
+    text: "What is the correct order of an EPIC order lifecycle?"
+    type: multiple_choice
+    options:
+      - "Signed -> Placed -> Completed -> Resulted"
+      - "Placed -> Signed -> Sent -> In Progress -> Completed -> Resulted"
+      - "Resulted -> Completed -> Signed -> Placed"
+      - "Placed -> Completed -> Signed -> Sent"
+    correct: 1
+    explanation: "An order is first Placed by the provider, then Signed (authorized), Sent to the fulfilling department, marked In Progress while being worked on, Completed when done, and finally Resulted when available for review."
+
+  - id: q4
+    text: "What is a SmartPhrase?"
+    type: multiple_choice
+    options:
+      - "A voice command for EPIC"
+      - "A reusable text template triggered by typing a dot followed by the phrase name"
+      - "An automated alert for critical results"
+      - "A patient search shortcut"
+    correct: 1
+    explanation: "SmartPhrases are reusable text templates. You type a dot (.) followed by the phrase name (e.g., .normalpath) and it expands into a full text template. They can include dynamic content that auto-fills from the patient's chart."
+
+  - id: q5
+    text: "Which EPIC module would you use to view a patient's pathology biopsy result?"
+    type: multiple_choice
+    options:
+      - "Cadence"
+      - "Chart Review (Results section)"
+      - "OpTime"
+      - "Resolute"
+    correct: 1
+    explanation: "Chart Review is the central hub for viewing a patient's medical record, including pathology results. Cadence is for scheduling, OpTime is for surgery, and Resolute is for billing."
